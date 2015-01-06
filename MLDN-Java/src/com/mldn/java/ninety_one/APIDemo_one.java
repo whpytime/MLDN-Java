@@ -1,6 +1,6 @@
 package com.mldn.java.ninety_one;
 
-public class APIDemo {
+public class APIDemo_one {
 
 	public static void main(String[] args) {
 		String str = "1231231";
