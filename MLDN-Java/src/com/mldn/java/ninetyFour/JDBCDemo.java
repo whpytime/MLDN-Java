@@ -16,5 +16,4 @@ public class JDBCDemo {
 		System.out.println(conn);
 		conn.close();// 关闭数据库连接
 	}
-
 }
