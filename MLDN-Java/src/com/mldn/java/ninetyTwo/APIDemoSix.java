@@ -1,17 +1,17 @@
 package com.mldn.java.ninetyTwo;
 
-interface Fruit {
+interface Fruit1 {
 
 }
 
-class Person implements Fruit, Cloneable {
+class Persona implements Fruit1, Cloneable {
 
 }
 
 public class APIDemoSix {
 
 	public static void main(String[] args) throws Exception {
-		Class<?> cls = Class.forName("com.mldn.java.ninetyTwo.Person");
+		Class<?> cls = Class.forName("com.mldn.java.ninetyTwo.Persona");
 		System.out.println("父类：" + cls.getSuperclass().getName());
 
 		Class<?>[] it = cls.getInterfaces(); // 取得全部接口
@@ -19,5 +19,5 @@ public class APIDemoSix {
 			System.out.println(it[x].getName());
 		}
 	}
-
+ 
 }
