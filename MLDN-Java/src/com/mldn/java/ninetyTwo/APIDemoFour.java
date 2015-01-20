@@ -1,6 +1,6 @@
 package com.mldn.java.ninetyTwo;
 
-class Person6 {
+class Person4 {
 
 	@Override
 	public String toString() {
@@ -13,7 +13,7 @@ public class APIDemoFour {
 
 	public static void main(String[] args) throws ClassNotFoundException,
 			InstantiationException, IllegalAccessException {
-		Person6 per = new Person6(); // 正常操作
+		Person4 per = new Person4(); // 正常操作
 		System.out.println(per);
 
 		Class<?> cls = Class.forName("com.mldn.java.NinetyTwo.Person");
