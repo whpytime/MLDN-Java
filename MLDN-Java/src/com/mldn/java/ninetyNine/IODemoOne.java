@@ -7,7 +7,8 @@ import java.io.OutputStream;
 public class IODemoOne {
 
 	public static void main(String[] args) throws Exception {
-		File file = new File("d:" + File.separator + "testjava" + File.separator + "myinfo.txt");
+		File file = new File("d:" + File.separator + "testjava"
+				+ File.separator + "myinfo.txt");
 		if (!file.getParentFile().exists()) {
 			file.getParentFile().mkdirs();// 先创建文件和文件夹
 		}
