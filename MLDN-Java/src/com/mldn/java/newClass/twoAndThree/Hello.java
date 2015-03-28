@@ -1,4 +1,4 @@
-package com.mldn.java.newClass.two;
+package com.mldn.java.newClass.twoAndThree;
 
 public class Hello{
 	public static void main(String args[])	{
