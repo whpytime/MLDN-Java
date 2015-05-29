@@ -17,7 +17,7 @@ public class APIDemoFour {
 		System.out.println(per);
 
 		Class<?> cls = Class.forName("com.mldn.java.NinetyTwo.Person");
-		Person per1 = (Person) cls.newInstance(); // 使用反射实例化对象
+		Person3 per1 = (Person3) cls.newInstance(); // 使用反射实例化对象
 		System.out.println(per1);
 	}
 
