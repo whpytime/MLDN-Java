@@ -82,7 +82,7 @@ class Link4 {
 		}
 
 		public String[] toArrayNode() {
-			Link4.this.retData[Link4.this.foot++] = this.data;// ???
+			Link4.this.retData[Link4.this.foot++] = this.data;
 			if (this.next != null) {
 				this.next.toArrayNode();
 			}

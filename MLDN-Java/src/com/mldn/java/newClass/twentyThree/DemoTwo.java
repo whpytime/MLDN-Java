@@ -106,6 +106,7 @@ class Group {
 	}
 
 	public Group(int gid, String name) {
+		this();
 		this.gid = gid;
 		this.name = name;
 	}
@@ -146,6 +147,7 @@ class Privilege {
 	}
 
 	public Privilege(int pid, String name) {
+		this();
 		this.pid = pid;
 		this.name = name;
 	}
