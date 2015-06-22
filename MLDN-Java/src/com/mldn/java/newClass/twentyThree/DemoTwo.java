@@ -49,9 +49,36 @@ public class DemoTwo {
 
 		// 第二层：输出关系
 		System.out.println(a1.getInfo() + "，所在组个数：" + a1.getGroups().size());
-		System.out.println("=================================");
-
-		System.out.println("=================================");
+		Group[] group = a1.getGroups().toArray();
+		for (int x = 0; x < group.length; x++) {
+			System.out.println("\t|- " + group[x].getInfo() + "，权限个数："
+					+ group[x].getPrivileges().size());
+			Privilege[] pri = group[x].getPrivileges().toArray();
+			for (int y = 0; y < pri.length; y++) {
+				System.out.println("\t\t|- " + pri[y].getInfo());
+			}
+		}
+		System.out.println("==============================================");
+		System.out.println(g2.getInfo() + "，权限个数" + g2.getPrivileges().size());
+		Privilege[] pri2 = g2.getPrivileges().toArray();
+		for (int x = 0; x < pri2.length; x++) {
+			System.out.println("\t|- " + pri2[x].getInfo());
+		}
+		Admin[] admin = g2.getAdmins().toArray();
+		for (int x = 0; x < admin.length; x++) {
+			System.out.println("\t|- " + admin[x].getInfo());
+		}
+		System.out.println("==============================================");
+		System.out.println(p3.getInfo() + "，具备此权限的管理员组个数："
+				+ p3.getGroups().size());
+		Group[] group2 = p3.getGroups().toArray();
+		for (int x = 0; x < group2.length; x++) {
+			System.out.println("\t|- " + group2[x].getInfo());
+			Admin[] admin2 = group2[x].getAdmins().toArray();
+			for (int y = 0; y < admin2.length; y++) {
+				System.out.println("\t\t|- " + admin2[y].getInfo());
+			}
+		}
 	}
 }
 
@@ -79,7 +106,8 @@ class Admin {
 		if (this == admin) {
 			return true;
 		}
-		if (this.aid.equals(admin.aid) && this.password.equals(admin.password) && this.flag == admin.flag) {
+		if (this.aid.equals(admin.aid) && this.password.equals(admin.password)
+				&& this.flag == admin.flag) {
 			return true;
 		}
 		return false;
@@ -90,7 +118,8 @@ class Admin {
 	}
 
 	public String getInfo() {
-		return "管理员编号：" + this.aid + "，密码：" + this.password + "，超级管理员：" + this.flag;
+		return "管理员编号：" + this.aid + "，密码：" + this.password + "，超级管理员："
+				+ this.flag;
 	}
 }
 
